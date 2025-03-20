@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider_mvvm/utils/routes/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,7 +13,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.pushNamed(context, AppRoutes.loginScreen);
+        },
       ),
     );
   }
